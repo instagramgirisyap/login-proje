@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+</head>
+<body>
+
+<script>
+if(sessionStorage.getItem("login")!=="ok"){
+  location.href="login.html";
+}
+</script>
+
+<h1>Dashboard</h1>
+<p>Hoş geldin: <b id="ad"></b></p>
+
+<button onclick="cikis()">Çıkış Yap</button>
+
+<script>
+ad.innerText = sessionStorage.getItem("aktifKullanici");
+
+function cikis(){
+  sessionStorage.clear();
+  location.href="login.html";
+}
+</script>
+
+</body>
+</html>
